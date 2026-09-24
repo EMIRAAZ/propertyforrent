@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | PropertyForRent.ae</title>
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .not-found-wrap {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .not-found-code {
+      font-size: 80px;
+      font-weight: 800;
+      color: #0066ff;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .not-found-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+    .not-found-text {
+      font-size: 15px;
+      color: #64748b;
+      max-width: 440px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .not-found-actions {
+      display: flex;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">PropertyForRent.ae</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="listings.html">Properties</a>
+        <a href="listings.html?category=rent">Rent</a>
+        <a href="listings.html?category=sale">Buy</a>
+      </nav>
+      <div class="header-actions">
+        <a href="listings.html" class="btn btn-primary">Browse Properties</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="not-found-wrap">
+    <div class="not-found-code">404</div>
+    <h1 class="not-found-title">Page Not Found</h1>
+    <p class="not-found-text">The page or property you are looking for doesn't exist or has been moved.</p>
+    <div class="not-found-actions">
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+      <a href="listings.html" class="btn btn-secondary">Explore Listings</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+</body>
+</html>
