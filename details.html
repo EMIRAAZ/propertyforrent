@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Property Details — PropertyForRent.ae</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">PropertyForRent.ae</a>
+    <nav class="main-nav">
+      <a href="index.html#about">About</a>
+      <a href="listings.html">Listings</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="social-icons" id="header-social-icons"></div>
+      <div class="select-wrap">
+        <select class="currency-select" aria-label="Currency">
+          <option>AED</option>
+          <option>USD</option>
+          <option>EUR</option>
+        </select>
+        <span class="select-chevron" id="currency-chevron"></span>
+      </div>
+      <button class="btn btn-primary" id="login-btn"><span id="login-icon"></span>Login</button>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Menu" id="mobile-nav-toggle"></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+
+<section class="page-banner">
+  <div class="container">
+    <div class="breadcrumbs" id="details-breadcrumbs">
+      <a href="index.html">Home</a> / <a href="listings.html">Listings</a> / <span id="breadcrumb-title">Property</span>
+    </div>
+    <h1 id="page-title">Loading property...</h1>
+  </div>
+</section>
+
+<div class="container" id="details-content">
+  <div class="details-layout">
+    <div class="details-main">
+      <div class="gallery" id="gallery"></div>
+
+      <div class="details-header">
+        <div>
+          <h1 class="details-title" id="details-title"></h1>
+          <div class="details-address" id="details-address"></div>
+        </div>
+        <div class="details-price" id="details-price"></div>
+      </div>
+
+      <div class="fact-strip" id="fact-strip"></div>
+
+      <div class="details-section">
+        <h2>Description</h2>
+        <p class="details-desc" id="details-desc"></p>
+        <div class="card-tags" id="details-tags"></div>
+      </div>
+
+      <div class="details-section">
+        <h2>Additional Details</h2>
+        <div class="detail-grid" id="additional-details"></div>
+      </div>
+
+      <div class="details-section">
+        <h2>Areas Nearby</h2>
+        <div class="nearby-grid" id="areas-nearby"></div>
+      </div>
+
+      <div class="details-section">
+        <h2>Features / Amenities</h2>
+        <div class="amenities-grid" id="amenities-grid"></div>
+      </div>
+
+      <div class="details-section" id="location-section">
+        <h2>Location</h2>
+        <div class="location-block" id="location-block"></div>
+      </div>
+
+      <div class="details-section">
+        <h2>Regulatory Information</h2>
+        <div class="regulatory-card" id="regulatory-card"></div>
+        <button type="button" class="btn btn-outline report-btn" id="report-btn">Report Property</button>
+      </div>
+
+      <div class="building-community-grid" id="building-community-grid"></div>
+
+      <div class="details-section" id="insights-section">
+        <h2>Insights</h2>
+        <div class="insights-grid" id="insights-grid"></div>
+      </div>
+    </div>
+
+    <aside class="agent-card" id="agent-card"></aside>
+  </div>
+
+  <section class="section related-section">
+    <h2 class="section-heading">Similar <span class="accent">Properties</span></h2>
+    <div class="carousel-wrap">
+      <button class="carousel-nav carousel-prev" aria-label="Previous" id="related-prev"></button>
+      <div class="carousel-track" id="related-track"></div>
+      <button class="carousel-nav carousel-next" aria-label="Next" id="related-next"></button>
+    </div>
+  </section>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PropertyForRent.ae — Find Your Next Rental Today</title>
+<meta name="description" content="Browse apartments, villas and penthouses for rent and sale across the UAE." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">PropertyForRent.ae</a>
+    <nav class="main-nav">
+      <a href="index.html#about">About</a>
+      <a href="listings.html">Listings</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="social-icons" id="header-social-icons"></div>
+      <div class="select-wrap">
+        <select class="currency-select" aria-label="Currency">
+          <option>AED</option>
+          <option>USD</option>
+          <option>EUR</option>
+        </select>
+        <span class="select-chevron" id="currency-chevron"></span>
+      </div>
+      <button class="btn btn-primary" id="login-btn"><span id="login-icon"></span>Login</button>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Menu" id="mobile-nav-toggle"></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+
+<section class="hero">
+  <div class="container hero-container">
+    <h1 class="hero-title">Find Your Next Rental Today.</h1>
+
+    <form class="search-card" id="hero-search-form">
+      <div class="search-row search-row-top">
+        <div class="search-field search-field-text">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.3-4.3"/>
+          </svg>
+          <input type="text" name="q" placeholder="Search.." />
+        </div>
+        <div class="search-field search-field-select search-field-emirate">
+          <select name="emirate" id="hero-emirate">
+            <option value="">Emirates</option>
+          </select>
+        </div>
+        <div class="search-field search-field-select search-field-city">
+          <select name="community" id="hero-community">
+            <option value="">City</option>
+          </select>
+        </div>
+      </div>
+      <div class="search-row search-row-bottom">
+        <div class="search-field search-field-select search-field-beds">
+          <select name="beds">
+            <option value="">Beds &amp; Baths</option>
+            <option value="0">Studio</option>
+            <option value="1">1+ Bed</option>
+            <option value="2">2+ Beds</option>
+            <option value="3">3+ Beds</option>
+            <option value="4">4+ Beds</option>
+          </select>
+        </div>
+        <div class="search-field search-field-select search-field-price">
+          <select name="price">
+            <option value="">Price</option>
+            <option value="0-100000">Up to 100k</option>
+            <option value="100000-500000">100k - 500k</option>
+            <option value="500000-2000000">500k - 2M</option>
+            <option value="2000000-999999999">2M+</option>
+          </select>
+        </div>
+        <div class="toggle-group" id="hero-category">
+          <button type="button" class="is-active" data-value="rent">Residencial</button>
+          <button type="button" data-value="sale">Commercial</button>
+        </div>
+        <button type="submit" class="btn btn-search-submit">Search</button>
+      </div>
+    </form>
+
+    <div class="quick-picks">
+      <span class="label">Quick Picks <svg class="sparkle-icon" width="16" height="16" viewBox="0 0 24 24" fill="#0066ff"><path d="M9 2l1.8 5.2L16 9l-5.2 1.8L9 16l-1.8-5.2L2 9l5.2-1.8L9 2zm11 11l1 2.9 2.9 1-2.9 1-1 2.9-1-2.9-2.9-1 2.9-1 1-2.9z"/></svg></span>
+      <a href="listings.html?emirate=Dubai">Apartments in UAE</a>
+      <a href="listings.html?community=Jumeirah%20Beach%20Residence%20(JBR)&type=Penthouse">Penthouse in Jumerah</a>
+      <a href="listings.html?emirate=Abu%20Dhabi">Abu Dhabi</a>
+      <a href="listings.html?community=Al%20Majaz">Al Jumerah</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-featured">
+  <div class="container">
+    <div class="section-heading-center">
+      <h2 class="featured-heading">Explore the latest<br><span class="accent-blue">Rental Property</span></h2>
+    </div>
+    <div class="tab-row tab-row-center" id="featured-tabs">
+      <button type="button" class="tab-pill is-active" data-filter="emirate" data-value="Dubai">Dubai</button>
+      <button type="button" class="tab-pill" data-filter="emirate" data-value="Abu Dhabi">Abu Dhabi</button>
+      <button type="button" class="tab-pill" data-filter="community" data-value="Palm Jumeirah">Palm Jumerah</button>
+      <button type="button" class="tab-pill" data-filter="emirate" data-value="Abu Dhabi">Abu Dhabi</button>
+      <button type="button" class="tab-pill" data-filter="community" data-value="Jumeirah">Al Jumerah</button>
+      <button type="button" class="tab-pill tab-pill-more" data-filter="more" data-value="more">More <span class="tab-chevron">&rsaquo;</span></button>
+    </div>
+    <div class="carousel-wrap featured-carousel-wrap">
+      <button class="carousel-nav carousel-prev" aria-label="Previous" id="featured-prev"></button>
+      <div class="carousel-track" id="featured-track"></div>
+      <button class="carousel-nav carousel-next" aria-label="Next" id="featured-next"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section section-community">
+  <div class="container">
+    <div class="section-heading-center">
+      <h2 class="featured-heading">Explore by <span class="accent-blue">Community</span></h2>
+    </div>
+    <div class="carousel-wrap community-carousel-wrap">
+      <button class="carousel-nav carousel-prev" aria-label="Previous" id="community-prev"></button>
+      <div class="carousel-track" id="community-track"></div>
+      <button class="carousel-nav carousel-next" aria-label="Next" id="community-next"></button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-heading">Popular Real Estate <span class="accent">Searches</span></h2>
+    <div class="searches-tabs" id="searches-category-tabs">
+      <button class="is-active" data-category="sale">Sale</button>
+      <button data-category="rent">Rent</button>
+    </div>
+    <div class="searches-subtabs" id="searches-emirate-tabs">
+      <button class="is-active" data-emirate="Dubai">Dubai</button>
+      <button data-emirate="Abu Dhabi">Abu Dhabi</button>
+      <button data-emirate="other">Other Emirates</button>
+    </div>
+    <div class="searches-grid" id="searches-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

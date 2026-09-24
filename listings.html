@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Property Listings — PropertyForRent.ae</title>
+<meta name="description" content="Filter and browse rental and sale listings across the UAE." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">PropertyForRent.ae</a>
+    <nav class="main-nav">
+      <a href="index.html#about">About</a>
+      <a href="listings.html" class="is-active">Listings</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="social-icons" id="header-social-icons"></div>
+      <div class="select-wrap">
+        <select class="currency-select" aria-label="Currency">
+          <option>AED</option>
+          <option>USD</option>
+          <option>EUR</option>
+        </select>
+        <span class="select-chevron" id="currency-chevron"></span>
+      </div>
+      <button class="btn btn-primary" id="login-btn"><span id="login-icon"></span>Login</button>
+    </div>
+    <button class="mobile-nav-toggle" aria-label="Menu" id="mobile-nav-toggle"></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
+</header>
+
+<div class="container listings-search-wrap">
+  <form class="search-card listings-search-card" id="filters-form">
+    <div class="search-row">
+      <div class="search-field search-field-text">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="#0066ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="text" id="f-q" name="q" placeholder="Search.." />
+      </div>
+      <div class="search-field search-field-select search-field-emirate">
+        <select id="f-emirate" name="emirate">
+          <option value="">Emirates</option>
+        </select>
+      </div>
+      <div class="search-field search-field-select search-field-city">
+        <select id="f-community" name="community">
+          <option value="">City</option>
+        </select>
+      </div>
+      <div class="toggle-group" id="f-property-category">
+        <input type="hidden" name="type" id="f-type" value="" />
+        <button type="button" class="is-active" data-value="">Residencial</button>
+        <button type="button" data-value="Commercial">Commercial</button>
+      </div>
+      <div class="search-field search-field-select search-field-beds">
+        <select id="f-beds" name="beds">
+          <option value="">Beds &amp; Baths</option>
+          <option value="0">Studio</option>
+          <option value="1">1+ Bed</option>
+          <option value="2">2+ Beds</option>
+          <option value="3">3+ Beds</option>
+          <option value="4">4+ Beds</option>
+        </select>
+      </div>
+      <div class="search-field search-field-select search-field-category">
+        <select id="f-category" name="category">
+          <option value="rent">Rent</option>
+          <option value="sale">Sale</option>
+        </select>
+      </div>
+      <button type="button" class="btn-search-submit" id="f-search-btn">Search</button>
+    </div>
+  </form>
+</div>
+
+<div class="container listings-layout">
+  <main>
+    <div class="property-list" id="listings-grid"></div>
+  </main>
+
+  <aside class="listings-promo">
+    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Premium villas and penthouses" loading="lazy" />
+    <div class="listings-promo-overlay">
+      <span class="listings-promo-eyebrow">Featured</span>
+      <h3>Discover Premium<br />Villas &amp; Penthouses</h3>
+      <p>Handpicked luxury homes across the UAE's most sought-after addresses.</p>
+      <a href="listings.html?type=Villa" class="btn btn-primary">Explore Villas</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/icons.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/listings.js"></script>
+</body>
+</html>

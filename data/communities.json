@@ -1,0 +1,10 @@
+[
+  { "id": "c1", "name": "Dubai", "emirate": "Dubai", "propertyCount": 165 },
+  { "id": "c2", "name": "Abu Dubai", "emirate": "Abu Dhabi", "propertyCount": 165 },
+  { "id": "c3", "name": "Sharjah", "emirate": "Sharjah", "propertyCount": 165 },
+  { "id": "c4", "name": "Sharjah", "emirate": "Sharjah", "propertyCount": 165 },
+  { "id": "c5", "name": "Sharjah", "emirate": "Sharjah", "propertyCount": 165 },
+  { "id": "c6", "name": "Sharjah", "emirate": "Sharjah", "propertyCount": 165 },
+  { "id": "c7", "name": "Dubai Marina", "emirate": "Dubai", "propertyCount": 165 },
+  { "id": "c8", "name": "Downtown Dubai", "emirate": "Dubai", "propertyCount": 165 }
+]
