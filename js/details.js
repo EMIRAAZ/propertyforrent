@@ -85,9 +85,29 @@
 
   /* ---------------- Sections ---------------- */
   function renderBreadcrumbAndTitle() {
-    document.title = `${property.title} — PropertyForRent.ae`;
+    const pageTitle = `${property.title} — PropertyForRent.ae`;
+    const summary = `${property.title} — ${property.type} for ${property.category === "rent" ? "rent" : "sale"} in ${property.community}, ${property.emirate}. ${PFR.formatPriceWithPeriod(property)}, ${property.beds === 0 ? "Studio" : `${property.beds} bed`}, ${property.areaSqft.toLocaleString()} sqft.`;
+    const pageUrl = `${window.location.origin}${window.location.pathname}?id=${property.id}`;
+    const image = PFR.propertyImages(property, 1)[0];
+
+    document.title = pageTitle;
     document.getElementById("page-title").textContent = property.title;
     document.getElementById("breadcrumb-title").textContent = property.title;
+
+    setMeta("meta-description", "content", summary);
+    setMeta("canonical-link", "href", pageUrl);
+    setMeta("og-title", "content", pageTitle);
+    setMeta("og-description", "content", summary);
+    setMeta("og-url", "content", pageUrl);
+    setMeta("og-image", "content", image);
+    setMeta("twitter-title", "content", pageTitle);
+    setMeta("twitter-description", "content", summary);
+    setMeta("twitter-image", "content", image);
+  }
+
+  function setMeta(id, attr, value) {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(attr, value);
   }
 
   function renderGallery() {
