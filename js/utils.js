@@ -134,11 +134,11 @@ const PFR = (() => {
         ${property.featured ? `<span class="badge">Trending Property</span>` : ""}
         <div class="card-image-track">
           ${images
-            .map(
-              (src, i) =>
-                `<img src="${src}" alt="${property.title}" loading="${i === 0 ? "eager" : "lazy"}" />`
-            )
-            .join("")}
+        .map(
+          (src, i) =>
+            `<img src="${src}" alt="${property.title}" loading="${i === 0 ? "eager" : "lazy"}" />`
+        )
+        .join("")}
         </div>
         <button type="button" class="card-fav-btn fav-btn ${fav}" data-fav-id="${property.id}" aria-label="Toggle favorite">
           ${favIcon}
@@ -152,7 +152,7 @@ const PFR = (() => {
       <div class="card-body">
         <div class="card-title-row">
           <h3 class="card-title">${property.title}</h3>
-          <span class="agency-badge">fām</span>
+          <span class="agency-badge">${property.developer || property.agency || "Dummy"}</span>
         </div>
         <div class="card-price"><span class="price-symbol">Đ</span> ${priceFormatted}</div>
         <div class="card-specs">
@@ -170,15 +170,14 @@ const PFR = (() => {
           <span class="location-icon">${ICONS.pin}</span>
           <span class="location-text" title="${property.address}">${property.address}</span>
         </div>
-        ${
-          contact && property.agent
-            ? `<div class="card-contact-row">
+        ${contact && property.agent
+        ? `<div class="card-contact-row">
                 <a class="contact-pill" href="tel:${property.agent.phone.replace(/\s/g, "")}">${ICONS.phone}<span>Call</span></a>
                 <a class="contact-pill" href="mailto:${property.agent.email}">${ICONS.mail}<span>Mail</span></a>
                 <a class="contact-pill" href="https://wa.me/${waNumber}" target="_blank" rel="noopener">${ICONS.whatsapp}<span>Whatsapp</span></a>
               </div>`
-            : ""
-        }
+        : ""
+      }
       </div>
     </article>`;
   }

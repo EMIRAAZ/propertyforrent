@@ -1080,6 +1080,7 @@ button {
   padding: 2px 7px;
   line-height: 1.2;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .card-price {
